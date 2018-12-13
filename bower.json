@@ -1,0 +1,30 @@
+{
+  "name": "Khutbah_JAIS",
+  "version": "1.0.8",
+  "authors": [
+    "Jamaludin Rajalu <jrajalu@gmail.com>"
+  ],
+  "description": "Khutbah_JAIS",
+  "main": "/",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "Khutbah_JAIS"
+  ],
+  "license": "CC BY",
+  "homepage": "http://github.com/jrajalu",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "uikit": "^2.27.5",
+    "magnific-popup": "^1.1.0",
+    "owl.carousel": "^2.3.4"
+  }
+}

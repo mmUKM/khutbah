@@ -1,36 +1,20 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Khutbah_JAIS
- */
-
-?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'khutbah-jais' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'khutbah-jais' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'khutbah-jais' ), 'khutbah-jais', '<a href="https://www.facebook.com/jrajalu">Jamaludin Rajalu</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
+<div class="push"></div>
+</div><!--wrapper-->
+<footer>
+  <nav class="wrap">
+    <?php
+      wp_nav_menu( array(
+        'theme_location'    => 'secondary',
+        'menu'              => 'Secondary Navigation',
+        'menu_class'        => 'footer-nav',
+      ));
+    ?>
+  </nav>
+<div class="wrap section group">
+  <div class="col span_6_of_12"><?php if (dynamic_sidebar( 'sidebar_3' )) : else : endif; ?></div>
+  <div class="col span_6_of_12">&nbsp;</div>
+</div>
+</footer>
 <?php wp_footer(); ?>
-
 </body>
 </html>
