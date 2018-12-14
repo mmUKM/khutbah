@@ -27,7 +27,7 @@ module.exports = function(grunt) {
       dist: { 
         options: { 
           sassDir: 'sass',
-          cssDir: 'css',
+          cssDir: '.',
           environment: 'production',
           outputStyle: 'expanded'
         }
@@ -66,16 +66,9 @@ module.exports = function(grunt) {
           'sass/main.scss',
           'sass/*.scss'
         ],
-        tasks: ['compass','cssmin','usebanner'],
+        tasks: ['compass','usebanner'],
           options: {
             livereload: true
-          }
-      },
-      js: {
-        files: ['js/dev/scripts.js'],
-        tasks: ['uglify'],
-          options: {
-            spawn: false
           }
       }
     }

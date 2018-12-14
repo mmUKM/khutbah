@@ -1,7 +1,6 @@
 <?php
 /**
  * @package Khutbah_JAIS
- 
  */
 get_header(); ?>
 

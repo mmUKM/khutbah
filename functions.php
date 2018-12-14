@@ -41,7 +41,7 @@ if ( ! function_exists('jrwtdw_theme_features') ) {
     set_post_thumbnail_size( 200, 200, true );
 
     add_theme_support( 'custom-header', array(
-      'default-image' => get_template_directory_uri() . '/img/logo-main.svg',
+      'default-image' => get_template_directory_uri() . '/img/logo-main.png',
       'width'         => 960,
       'height'        => 100,
     ));
@@ -193,7 +193,7 @@ add_filter( 'wp_title', 'jrwtdw_wp_title', 10, 2 );
 function jrwtdw_login_logo() { ?>
   <style type="text/css">
     body.login div#login h1 a {
-      background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo-admin.svg);
+      background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo-admin.png);
       -webkit-background-size: 320px;
       background-size: 320px;
       background-position: center top;

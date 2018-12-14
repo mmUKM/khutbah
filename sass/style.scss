@@ -60,6 +60,17 @@ body {
   margin: 0 auto;
 }
 
+#header {
+  background: rgba(1,166,184,1);
+  background: -moz-linear-gradient(left, rgba(1,166,184,1) 0%, rgba(50,174,166,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(1,166,184,1)), color-stop(100%, rgba(50,174,166,1)));
+  background: -webkit-linear-gradient(left, rgba(1,166,184,1) 0%, rgba(50,174,166,1) 100%);
+  background: -o-linear-gradient(left, rgba(1,166,184,1) 0%, rgba(50,174,166,1) 100%);
+  background: -ms-linear-gradient(left, rgba(1,166,184,1) 0%, rgba(50,174,166,1) 100%);
+  background: linear-gradient(to right, rgba(1,166,184,1) 0%, rgba(50,174,166,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01a6b8', endColorstr='#32aea6', GradientType=1 );
+}
+
 .header {
   img {
     width: 100%;
@@ -122,50 +133,6 @@ footer {
   box-shadow: inset 0 -3px 0 rgba(0,0,0,.05);
 }
 
-// owl carousel
-
-
-#owl-front .item img{
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.carousel-wrap {
-  .owl-buttons {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    top: 50%;
-  }
-}
-
-.carousel-wrap {
-  .owl-theme .owl-controls .owl-buttons div {
-    position: absolute;
-    color: #fff;
-    zoom: 1;
-    width: 60px;
-    height: 60px;
-    display: block;
-    font-size: 48px;
-    filter: Alpha(Opacity=50);
-    opacity: .5;
-    background: transparent;
-    padding: 0 0 0 0;
-    margin: -38px 0 0 0;
-  }
-}
-
-.carousel-wrap {
-  .owl-prev {
-    left: 1%;
-  }
-  .owl-next {
-    right: 1%;
-  }
-}
-
 // social button
 
 .social-button {
@@ -177,15 +144,15 @@ footer {
     margin-left: 5px;
   }
   a {
-      display: table-cell;
-      width: 40px;
-      height: 40px;
-      background: #39BFBF;
-      @include border-radius(50%);
-      text-align: center;
-      vertical-align: middle;
-      color: #fff;
-      font-size: 20px;
+    display: table-cell;
+    width: 40px;
+    height: 40px;
+    background: #39BFBF;
+    @include border-radius(50%);
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 20px;
   }
   a:hover {
     color: #ccc;
@@ -236,15 +203,15 @@ footer {
 @media only screen
 and (min-width : 320px)
 and (max-width : 640px) {
-
+  
   body {
     padding: 0 10px 0;
   }
-
+  
   .gallery-grid {
     width: 100% !important;
   }
-
+  
   .social-button {
     display: table;
     margin: 0 auto;
@@ -259,5 +226,6 @@ and (max-width : 640px) {
     display: table;
     margin: 0 auto;
   }
-
+  
 }
+
