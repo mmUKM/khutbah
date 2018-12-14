@@ -664,13 +664,13 @@ body {
 
 #header {
   background: #01a6b8;
-  background: -moz-linear-gradient(left, #01a6b8 0%, #32aea6 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, #01a6b8), color-stop(100%, #32aea6));
-  background: -webkit-linear-gradient(left, #01a6b8 0%, #32aea6 100%);
-  background: -o-linear-gradient(left, #01a6b8 0%, #32aea6 100%);
-  background: -ms-linear-gradient(left, #01a6b8 0%, #32aea6 100%);
-  background: linear-gradient(to right, #01a6b8 0%, #32aea6 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01a6b8', endColorstr='#32aea6', GradientType=1 );
+  background: -moz-linear-gradient(top, #01a6b8 0%, #32aea6 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #01a6b8), color-stop(100%, #32aea6));
+  background: -webkit-linear-gradient(top, #01a6b8 0%, #32aea6 100%);
+  background: -o-linear-gradient(top, #01a6b8 0%, #32aea6 100%);
+  background: -ms-linear-gradient(top, #01a6b8 0%, #32aea6 100%);
+  background: linear-gradient(to bottom, #01a6b8 0%, #32aea6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01a6b8', endColorstr='#32aea6', GradientType=0 );
 }
 
 .header img {
