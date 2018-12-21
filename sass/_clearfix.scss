@@ -1,10 +1,13 @@
-.clearfix:before, .clearfix:after {
-  content: " ";
-  display: table;
-}
+.clearfix:before,
 .clearfix:after {
-  clear: both;
+    content: " ";
+    display: table;
 }
-.clearfix { 
-  *zoom: 1; 
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
 }

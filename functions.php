@@ -1,7 +1,6 @@
 <?php
 /**
  * @package Khutbah_JAIS
- 
  */
 
 /**
@@ -11,8 +10,8 @@
 
 require get_template_directory() . '/lib/theme-updates/theme-update-checker.php';
   new ThemeUpdateChecker(
-    'kendonga-master',
-    'https://raw.githubusercontent.com/jrajalu/kendonga/master/version.json'
+    'khutbah-master',
+    'https://raw.githubusercontent.com/mmUKM/khutbah/master/package.json'
   );
 
 /**
@@ -63,9 +62,6 @@ if ( ! function_exists('jrwtdw_theme_require') ) {
 
   function jrwtdw_theme_require()  {
 
-    require_once  get_template_directory() . '/lib/cmb2/init.php';
-
-    require_once  get_template_directory() . '/inc/theme-metabox.php';
     require_once  get_template_directory() . '/inc/theme-navmenu.php';
     require_once  get_template_directory() . '/inc/theme-post-type.php';
     require_once  get_template_directory() . '/inc/theme-options.php';
@@ -141,17 +137,15 @@ if ( ! function_exists( 'jrwtdw_theme_scripts' ) ) {
   function jrwtdw_theme_scripts() {
 
     wp_deregister_script( 'jquery' );
-    wp_enqueue_script( 'jquery', get_template_directory_uri() . '/lib/jquery/jquery.min.js', array(), '2.3.1', false );
+    wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '2.3.1', false );
     wp_enqueue_script( 'uikit', get_template_directory_uri() . '/lib/uikit/js/uikit.min.js', array(), '1.0', true );
+    wp_enqueue_script( 'uikit-icon', get_template_directory_uri() . '/lib/uikit/js/uikit-icons.min.js', array(), '1.0', true );
     wp_enqueue_script( 'uikit-slider', get_template_directory_uri() . '/lib/uikit/js/components/slider.min.js', array(), '1.0', true );
     wp_enqueue_script( 'uikit-slideshow', get_template_directory_uri() . '/lib/uikit/js/components/slideshow.min.js', array(), '1.0', true );
     wp_enqueue_script( 'theme', get_template_directory_uri() . '/js/scripts.js', array(), '1.0', true );
 
-    wp_enqueue_style( 'fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,600,400', flase, '1.0' );
-    wp_enqueue_style( 'uikit', get_template_directory_uri() . '/lib/uikit/css/uikit.almost-flat.min.css', flase, '1.0' );
-    wp_enqueue_style( 'uikit-slider', get_template_directory_uri() . '/lib/uikit/css/components/slider.almost-flat.min.css', flase, '1.0' );
-    wp_enqueue_style( 'uikit-slideshow', get_template_directory_uri() . '/lib/uikit/css/components/slideshow.almost-flat.min.css', flase, '1.0' );
-    wp_enqueue_style( 'uikit-slidenav', get_template_directory_uri() . '/lib/uikit/css/components/slidenav.almost-flat.min.css', flase, '1.0' );
+    wp_enqueue_style( 'fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,600,400', false, '1.0' );
+    wp_enqueue_style( 'uikit', get_template_directory_uri() . '/lib/uikit/css/uikit.min.css', false, '1.0' );
     
     wp_enqueue_style( 'theme', get_stylesheet_uri(), false, '1.0' );
 
@@ -191,28 +185,29 @@ add_filter( 'wp_title', 'jrwtdw_wp_title', 10, 2 );
  */
 
 function jrwtdw_login_logo() { ?>
-  <style type="text/css">
+<style type="text/css">
     body.login div#login h1 a {
-      background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo-admin.png);
-      -webkit-background-size: 320px;
-      background-size: 320px;
-      background-position: center top;
-      background-repeat: no-repeat;
-      color: #999;
-      height: 80px;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 1.3em;
-      margin: 0 auto 0;
-      padding: 0;
-      text-decoration: none;
-      width: 320px;
-      text-indent: -9999px;
-      outline: 0;
-      overflow: hidden;
-      display: block;
+        background-image: url(<?php echo get_stylesheet_directory_uri();
+        ?>/img/logo-admin.png);
+        -webkit-background-size: 320px;
+        background-size: 320px;
+        background-position: center top;
+        background-repeat: no-repeat;
+        color: #999;
+        height: 80px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.3em;
+        margin: 0 auto 0;
+        padding: 0;
+        text-decoration: none;
+        width: 320px;
+        text-indent: -9999px;
+        outline: 0;
+        overflow: hidden;
+        display: block;
     }
-  </style>
+</style>
 <?php }
 add_action( 'login_enqueue_scripts', 'jrwtdw_login_logo' );
 

@@ -1,1 +1,2 @@
-Kendong A Constuction & Enterprise
+**Theme Name:** Khutbah_JAIS
+**Version:** 1.0.0

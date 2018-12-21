@@ -7,18 +7,11 @@ module.exports = function(grunt) {
     // grunt-contrib-copy
     copy: {
       dist: {
-        files: [
-        {
+        files: [{
           expand: true,
-          cwd: 'bower_components/uikit',
-          src: ['css/**','js/**'],
+          cwd: 'node_modules/uikit/dist',
+          src: '*/**/**',
           dest: 'lib/uikit'
-        },
-        {
-          expand: true,
-          cwd: 'bower_components/jquery/dist',
-          src: '*',
-          dest: 'lib/jquery'   
         }]
       }
     },
@@ -27,9 +20,38 @@ module.exports = function(grunt) {
       dist: { 
         options: { 
           sassDir: 'sass',
-          cssDir: '.',
+          cssDir: 'css',
           environment: 'production',
           outputStyle: 'expanded'
+        }
+      }
+    },
+    // grunt-contrib-uglify
+    uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> v<%= pkg.version %> by <%= pkg.author %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+        sourceMap: false
+      },
+      jquery: {
+        src: 'node_modules/jquery/dist/jquery.js',
+        dest: 'js/jquery.min.js'
+      },
+      ukmtheme: {
+        src: 'js/scripts.js',
+        dest: 'js/scripts.min.js'
+      }
+    },
+    // grunt-contrib-cssmin
+    cssmin: {
+      options: {
+        shorthandCompacting: false,
+        roundingPrecision: -1,
+        keepSpecialComments: 0
+      },
+      target: {
+        files: {
+          'style.css': 'css/style.css',
+          'css/admin.min.css': 'css/admin.css'
         }
       }
     },
@@ -53,22 +75,30 @@ module.exports = function(grunt) {
     },
     // grunt-contrib-clean
     clean: {
-      js: ['js/*.js', '!js/*.min.js'],
-      css: ['img/*.css', 'css/*.css', '!css/*.min.css']
+      js: ['lib/uikit/js/*.js', 'lib/uikit/js/components/*.js', '!lib/uikit/js/components/*.min.js', '!lib/uikit/js/*.min.js'],
+      css: ['lib/uikit/css/*.css', '!lib/uikit/css/*.min.css'],
+      dir: ['.sass-cache/']
     },
     // grunt-contrib-watch
     watch: {
       configFiles: {
-        files: ['Gruntfile.js', 'bower.js', 'version.json']
+        files: ['Gruntfile.js']
       },
       css: {
         files: [
-          'sass/main.scss',
+          'sass/style.scss',
           'sass/*.scss'
         ],
-        tasks: ['compass','usebanner'],
+        tasks: ['compass','cssmin','usebanner'],
           options: {
             livereload: true
+          }
+      },
+      js: {
+        files: ['js/scripts.js'],
+        tasks: ['uglify'],
+          options: {
+            spawn: false
           }
       }
     }
@@ -81,10 +111,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-css-url-rewrite');
 
   // execute grunt task
   
-  grunt.registerTask('default', ['copy', 'compass', 'usebanner']);
+  grunt.registerTask('default', ['copy', 'compass', 'uglify', 'cssmin', 'usebanner']);
 
 };
