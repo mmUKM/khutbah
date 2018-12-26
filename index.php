@@ -11,7 +11,6 @@ get_header();
 
  // SLIDERS - uikit slideshow
 ?>
-
 <div class="uk-position-relative uk-visible-toggle" uk-slideshow="animation: push; ratio: 1440:560;">
     <ul class="uk-slideshow-items">
         <?php
@@ -28,6 +27,7 @@ get_header();
             <?php if( get_field('khutbah_slider_image') ): ?>
             <img src="<?php the_field('khutbah_slider_image'); ?>" alt="" uk-cover>
             <?php endif; ?>
+            <?php if( get_field('khutbah_slider_caption') ): ?>
             <div class="uk-position-center uk-position-small uk-text-center uk-light">
                 <h2 class="uk-margin-remove"><?php the_title(); ?></h2>
                 <p class="uk-margin-remove"><?php the_field('khutbah_slider_decriptions'); ?></p>
@@ -54,6 +54,7 @@ get_header();
                     </a>
                 </p>
             </div>
+            <?php endif; ?>
         </li>
         <?php  endwhile; ?>
     </ul>
@@ -87,9 +88,10 @@ get_header();
         <div>
             <div class="uk-card-body">
                 <h1>Podcast Terkini</h1>
-                <h3 class="uk-card-title uk-margin-remove-bottom"><a href="<?php echo get_post_permalink( $post->ID ); ?>"><?php the_title(); ?></a></h3>
+                <h3 class="uk-card-title uk-margin-remove"><a href="<?php echo get_post_permalink( $post->ID ); ?>"><?php the_title(); ?></a></h3>
                 <p class="uk-text-meta uk-margin-remove-top"><?php the_field('khutbah_podcast_date'); ?></p>
-                <?php the_field('khutbah_podcast_descriptions'); ?>
+                <p class="uk-text-meta uk-text-left"><span uk-icon="user"></span> <?php the_field('khutbah_podcast_khatib'); ?></p>
+                <p class="uk-text-meta uk-text-left uk-margin-remove-top"><span uk-icon="location"></span> <?php the_field('khutbah_podcast_location'); ?></p>
             </div>
         </div>
         <?php endwhile; ?>
@@ -116,13 +118,25 @@ get_header();
                 <div class="uk-card-body">
                     <h3 class="uk-card-title uk-margin-remove"><a href="<?php echo get_post_permalink( $post->ID ); ?>"><?php the_title(); ?></a></h3>
                     <p class="uk-text-meta uk-margin-remove-top"><?php the_field('khutbah_podcast_date'); ?></p>
-                    <?php the_field('khutbah_podcast_descriptions'); ?>
-                    <p>
-                        <a 
-                            href=""
-                            class="uk-icon-button uk-margin-small-right" uk-icon="soundcloud">
+                    <p class="uk-text-meta uk-text-left"><span uk-icon="user"></span> <?php the_field('khutbah_podcast_khatib'); ?></p>
+                    <p class="uk-text-meta uk-text-left uk-margin-remove-top"><span uk-icon="location"></span> <?php the_field('khutbah_podcast_location'); ?></p>
+                    <p uk-margin>
+                        <a class="uk-icon-button uk-margin-small-right" uk-icon="soundcloud"
+                            href="
+                            <?php
+                                echo get_post_permalink( $podcast->ID);
+                            ?>
+                            "
+                        >
                         </a>
-                        <a href="" class="uk-icon-button" uk-icon="youtube"></a>
+                        <a class="uk-icon-button" uk-icon="youtube"
+                            href="
+                            <?php
+                                echo the_field('khutbah_podcast_video');
+                            ?>
+                            "
+                        >
+                        </a>
                     </p>
                 </div>
             </div>

@@ -2,6 +2,7 @@
 /**
  * @package Khutbah_JAIS
  * Template Name: Full Width
+ * Template Post Type: page, khutbah_slide
  */
 get_header(); ?>
 <div class="wrap section group page">
