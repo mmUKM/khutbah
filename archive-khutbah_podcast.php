@@ -55,15 +55,27 @@ get_header(); ?>
                         <?php endif; ?>
                     </div>
                     <div class="uk-card-body">
-                        <h3 class="uk-card-title uk-margin-remove-bottom"><a href="<?php echo get_post_permalink( $post->ID ); ?>"><?php the_title(); ?></a></h3>
+                        <h3 class="uk-card-title uk-margin-remove"><a href="<?php echo get_post_permalink( $post->ID ); ?>"><?php the_title(); ?></a></h3>
                         <p class="uk-text-meta uk-margin-remove-top"><?php the_field('khutbah_podcast_date'); ?></p>
-                        <p class="uk-text-small"><?php the_field('khutbah_podcast_descriptions'); ?></p>
-                        <p>
-                            <a 
-                                href=""
-                                class="uk-icon-button uk-margin-small-right" uk-icon="soundcloud">
+                        <p class="uk-text-meta uk-text-left"><span uk-icon="user"></span> <?php the_field('khutbah_podcast_khatib'); ?></p>
+                        <p class="uk-text-meta uk-text-left uk-margin-remove-top"><span uk-icon="location"></span> <?php the_field('khutbah_podcast_location'); ?></p>
+                        <p uk-margin>
+                            <a class="uk-icon-button uk-margin-small-right" uk-icon="soundcloud"
+                                href="
+                                <?php
+                                    echo get_post_permalink( $podcast->ID);
+                                ?>
+                                "
+                            >
                             </a>
-                            <a href="" class="uk-icon-button" uk-icon="youtube"></a>
+                            <a class="uk-icon-button" uk-icon="youtube"
+                                href="
+                                <?php
+                                    echo the_field('khutbah_podcast_video');
+                                ?>
+                                "
+                            >
+                            </a>
                         </p>
                     </div>
                 </div>

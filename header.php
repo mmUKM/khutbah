@@ -29,7 +29,9 @@
                     </a>
                 </div>
                 <div class="col span_6_of_12">
-                    &nbsp;
+                    <a href="">
+                        <img src="<?php echo get_option('jrwtdw_header_logo_right'); ?>" alt="">
+                    </a>
                 </div>
             </header>
         </div>

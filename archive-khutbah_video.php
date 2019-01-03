@@ -64,8 +64,8 @@ get_header(); ?>
                     <div class="uk-card-body">
                         <h3 class="uk-card-title uk-margin-remove-bottom"><a href="<?php echo get_post_permalink( $post->ID ); ?>"><?php the_title(); ?></a></h3>
                         <p class="uk-text-meta uk-margin-remove-top"><?php the_field('khutbah_video_date'); ?></p>
-                        <p class="uk-text-meta uk-text-left">Khatib: <?php the_field('khutbah_video_khatib'); ?></p>
-                        <p class="uk-text-meta uk-text-left">Lokasi: <?php the_field('khutbah_video_location'); ?></p>
+                        <p class="uk-text-meta uk-text-left"><span uk-icon="user"></span> <?php the_field('khutbah_video_khatib'); ?></p>
+                        <p class="uk-text-meta uk-text-left uk-margin-remove-top"><span uk-icon="location"></span> <?php the_field('khutbah_video_location'); ?></p>
                         <div uk-lightbox>
                             <a class="uk-button uk-button-default uk-button-small" href="<?php the_field('khutbah_video_short', false, false); ?>" data-caption="<?php the_title(); ?>">5 Min</a>
                             <a class="uk-button uk-button-primary uk-button-small" href="<?php the_field('khutbah_video_link', false, false); ?>" data-caption="<?php the_title(); ?>">Penuh</a>

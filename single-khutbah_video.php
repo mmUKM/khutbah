@@ -16,6 +16,8 @@ get_header(); ?>
             <?php the_field('khutbah_video_link'); ?>
         </div>
         <?php the_field('khutbah_video_descriptions'); ?>
+        <?php echo do_shortcode('[Sassy_Social_Share style="background-color:#fff;"]') ?>
+
         <?php endwhile; ?>
     </div>
     <div class="col span_4_of_12 sidebar">

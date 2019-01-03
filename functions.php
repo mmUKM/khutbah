@@ -41,7 +41,7 @@ if ( ! function_exists('jrwtdw_theme_features') ) {
 
     add_theme_support( 'custom-header', array(
       'default-image' => get_template_directory_uri() . '/img/logo-main.png',
-      'width'         => 960,
+      'width'         => 480,
       'height'        => 100,
     ));
 
