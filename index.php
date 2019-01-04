@@ -145,4 +145,6 @@ get_header();
     </div>
 </div>
 
+<?php if (dynamic_sidebar( 'sidebar_1' )) : else : endif; ?>
+
 <?php get_footer(); ?>

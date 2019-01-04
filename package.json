@@ -1,6 +1,6 @@
 {
   "name": "Khutbah_JAIS",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Web proposal for khutbah multimedia",
   "main": "Gruntfile.js",
   "devDependencies": {

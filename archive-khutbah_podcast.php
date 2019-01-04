@@ -12,7 +12,7 @@ get_header(); ?>
                 <button class="uk-button uk-button-default uk-float-right archive-toggle-view-button" type="button" uk-toggle="target: .toggle"><span uk-icon="list"></span></button>
             </div>
         </div>
-        <div class="toggle">
+        <div class="toggle" hidden>
         <table class="uk-table uk-table-striped">
             <thead>
                 <tr>
@@ -34,7 +34,7 @@ get_header(); ?>
         </div>
         </div>
 
-        <div class="toggle" hidden>
+        <div class="toggle">
 
         <div class="uk-child-width-1-3@m uk-grid-match" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500" uk-grid>
             <?php
@@ -77,6 +77,7 @@ get_header(); ?>
                             >
                             </a>
                         </p>
+                        <p class="uk-align-center"><?php echo do_shortcode('[Sassy_Social_Share style="background-color:#fff;"]') ?></p>
                     </div>
                 </div>
             </div>

@@ -119,6 +119,6 @@ module.exports = function(grunt) {
 
   // execute grunt task
   
-  grunt.registerTask('default', ['copy', 'compass', 'uglify', 'cssmin', 'usebanner']);
+  grunt.registerTask('default', ['compass', 'uglify', 'cssmin', 'usebanner']);
 
 };

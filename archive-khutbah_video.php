@@ -8,11 +8,11 @@ get_header(); ?>
         <h2 class="uk-h2">Video</h2>
         <div class="wrap group">
             <div class="archive-toggle-view span_3_of_12">
-            <button class="uk-button uk-button-default uk-float-right" type="button" uk-toggle="target: .toggle; animation: uk-animation-fade"><span uk-icon="thumbnails"></span></button>
+                <button class="uk-button uk-button-default uk-float-right" type="button" uk-toggle="target: .toggle; animation: uk-animation-fade"><span uk-icon="thumbnails"></span></button>
                 <button class="uk-button uk-button-default uk-float-right archive-toggle-view-button" type="button" uk-toggle="target: .toggle"><span uk-icon="list"></span></button>
             </div>
         </div>
-        <div class="toggle">
+        <div class="toggle" hidden>
         <table class="uk-table uk-table-striped">
             <thead>
                 <tr>
@@ -41,7 +41,7 @@ get_header(); ?>
         </div>
         </div>
 
-        <div class="toggle" hidden>
+        <div class="toggle">
 
         <div class="uk-child-width-1-3@m uk-grid-match" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500" uk-grid>
             <?php
@@ -70,6 +70,7 @@ get_header(); ?>
                             <a class="uk-button uk-button-default uk-button-small" href="<?php the_field('khutbah_video_short', false, false); ?>" data-caption="<?php the_title(); ?>">5 Min</a>
                             <a class="uk-button uk-button-primary uk-button-small" href="<?php the_field('khutbah_video_link', false, false); ?>" data-caption="<?php the_title(); ?>">Penuh</a>
                         </div>
+                        <p class="uk-align-center"><?php echo do_shortcode('[Sassy_Social_Share style="background-color:#fff;"]') ?></p>
                     </div>
                 </div>
             </div>
