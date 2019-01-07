@@ -88,27 +88,27 @@ get_header();
         <div>
             <div class="uk-card-body">
                 <h1>Terkini</h1>
-                <h3 class="uk-card-title uk-margin-remove"><a href="<?php echo get_post_permalink( $post->ID ); ?>"><?php the_title(); ?></a></h3>
+                <h3 class="uk-margin-remove"><?php the_title(); ?></h3>
                 <p class="uk-text-meta uk-margin-remove-top"><?php the_field('khutbah_podcast_date'); ?></p>
                 <p class="uk-text-meta uk-text-left"><span uk-icon="user"></span> <?php the_field('khutbah_podcast_khatib'); ?></p>
                 <p class="uk-text-meta uk-text-left uk-margin-remove-top"><span uk-icon="location"></span> <?php the_field('khutbah_podcast_location'); ?></p>
                 <p uk-margin>
-                    <a class="uk-icon-button uk-margin-small-right" uk-icon="soundcloud"
+                    <a class="uk-margin-small-right" uk-icon="icon:soundcloud;ratio:2;"
                         href="
                         <?php
                             echo get_post_permalink( $podcast->ID);
                         ?>
                         "
                     >
-                    </a>
-                    <a class="uk-icon-button" uk-icon="youtube"
+                    </a>Podcast
+                    <a class="" uk-icon="icon:youtube;ratio:2;"
                         href="
                         <?php
                             echo the_field('khutbah_podcast_video');
                         ?>
                         "
                     >
-                    </a>
+                    </a>Video
                 </p>
             </div>
         </div>

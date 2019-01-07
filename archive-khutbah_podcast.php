@@ -59,24 +59,6 @@ get_header(); ?>
                         <p class="uk-text-meta uk-margin-remove-top"><?php the_field('khutbah_podcast_date'); ?></p>
                         <p class="uk-text-meta uk-text-left"><span uk-icon="user"></span> <?php the_field('khutbah_podcast_khatib'); ?></p>
                         <p class="uk-text-meta uk-text-left uk-margin-remove-top"><span uk-icon="location"></span> <?php the_field('khutbah_podcast_location'); ?></p>
-                        <p uk-margin>
-                            <a class="uk-icon-button uk-margin-small-right" uk-icon="soundcloud"
-                                href="
-                                <?php
-                                    echo get_post_permalink( $podcast->ID);
-                                ?>
-                                "
-                            >
-                            </a>
-                            <a class="uk-icon-button" uk-icon="youtube"
-                                href="
-                                <?php
-                                    echo the_field('khutbah_podcast_video');
-                                ?>
-                                "
-                            >
-                            </a>
-                        </p>
                         <p class="uk-align-center"><?php echo do_shortcode('[Sassy_Social_Share style="background-color:#fff;"]') ?></p>
                     </div>
                 </div>
