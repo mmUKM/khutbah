@@ -12,6 +12,12 @@ module.exports = function(grunt) {
           cwd: 'node_modules/uikit/dist',
           src: '*/**/**',
           dest: 'lib/uikit'
+        },
+        {
+          expand: true,
+          cwd: 'node_modules/font-awesome',
+          src: ['css/*','fonts/*'],
+          dest: 'lib/font-awesome'
         }]
       }
     },

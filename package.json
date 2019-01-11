@@ -1,9 +1,10 @@
 {
   "name": "Khutbah_JAIS",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Web proposal for khutbah multimedia",
   "main": "Gruntfile.js",
   "devDependencies": {
+    "font-awesome": "^4.7.0",
     "grunt": "^1.0.3",
     "grunt-banner": "^0.6.0",
     "grunt-contrib-clean": "^2.0.0",
@@ -29,5 +30,6 @@
   },
   "homepage": "https://github.com/mmUKM/khutbah#readme",
   "details_url": "https://github.com/mmUKM/khutbah/blob/master/README.md",
-  "download_url": "https://github.com/mmUKM/khutbah/archive/master.zip"
+  "download_url": "https://github.com/mmUKM/khutbah/archive/master.zip",
+  "dependencies": {}
 }
